@@ -90,6 +90,7 @@ html, body {
 a {
 	color: #CCC;
   text-decoration: none !important;
+	cursor:pointer !important;
 }
 a:hover {
 	color: #9960ff;
