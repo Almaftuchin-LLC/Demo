@@ -503,10 +503,10 @@
 
   <!-- Scripts -->
   <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
+<!-- <script src="vendor/jquery/jquery.min.js"></script> -->
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-  <script src="assets/js/isotope.min.js"></script>
+<!-- <script src="assets/js/isotope.min.js"></script> -->
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/tabs.js"></script>
   <script src="assets/js/popup.js"></script>
@@ -521,22 +521,20 @@ var images = document.getElementsByTagName('img');
   };
 //]]>
 </script>
-<script type='text/javascript'>
-// SMOOTH SCROLLING
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
 $(document).ready(function(){
   // Add smooth scrolling to all links
-  $(&quot;a&quot;).on(&#39;click&#39;, function(event) {
-
-    if (this.hash !== &quot;&quot;) {
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
       event.preventDefault();
-  history.replaceState(null, null, &#39; &#39;);
-
       var hash = this.hash;
-      $(&#39;html, body&#39;).animate({
+      $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 800, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
-  history.replaceState(null, null, &#39; &#39;);
       });
     } // End if
   });
