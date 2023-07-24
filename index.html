@@ -512,15 +512,36 @@
   <script src="assets/js/popup.js"></script>
   <script src="assets/js/custom.js"></script>
 <span style='display:none !important;visibility:hidden !important;height:0px !important;width:0px !important'>
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4769932,4,0,0,0,00010000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
+<script>
+//<![CDATA[
+var images = document.getElementsByTagName('img');
+  for (var i = 0; i < images.length; i++) {
+    images[i].src = images[i].src.replace(/.*?:\/\//g ,
+"https://i1.wp.com/");
+  };
+//]]>
+</script>
+<script type='text/javascript'>
+// SMOOTH SCROLLING
+$(document).ready(function(){
+  // Add smooth scrolling to all links
+  $(&quot;a&quot;).on(&#39;click&#39;, function(event) {
+
+    if (this.hash !== &quot;&quot;) {
+      event.preventDefault();
+  history.replaceState(null, null, &#39; &#39;);
+
+      var hash = this.hash;
+      $(&#39;html, body&#39;).animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+        window.location.hash = hash;
+  history.replaceState(null, null, &#39; &#39;);
+      });
+    } // End if
+  });
+});
+</script>
   </span>
   </body>
 
